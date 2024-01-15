@@ -1,0 +1,12 @@
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sparkfabrik/android-build-action@v1.5.0
+        with:
+          project-path: OpenUserManagement
+          output-path: users.apk
+          gradle-task: bundleRelease
+          package-name: Users
